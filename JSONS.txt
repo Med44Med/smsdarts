@@ -1,0 +1,66 @@
+send SMS :
+1- client -> server : 
+    {
+        "type":"sent_sms",
+        "to":"123",
+        "message":"hello",
+        "schedule": "2026-01-28T12:00:00"
+    }
+2- 
+2.1 - server -> backend:
+    {
+        "id":"",
+        "channel":"",
+        "from":"",
+        "to":"",
+        "message":"",
+        "schedule":"",
+        "status":"pending"
+    }
+2.2 - server -> device :
+    {
+        "messageId":"",
+        "type":"sent_sms",
+        "to":"123",
+        "message":"hello"
+    }
+3- device -> server :
+    {
+        "messageId":"",
+        "status":"success"
+    }
+4- 
+4.1 - server -> backend:
+    {
+        "id":"",
+        "status":"success"
+    }
+4.2 - server -> client :
+    {
+        "status":"success"
+    }
+
+recieve SMS :
+1- device -> server :
+    {
+        "type":"recieved_sms",
+        "from":"123",
+        "to":"123",
+        "message":"hello"
+    }
+2- server -> backend:
+    {
+        "id":"",
+        "channel":"",
+        "from":"",
+        "to":"",
+        "message":"",
+        "status":"recieved"
+    }
+3- server -> client :
+    {
+        "status":"success",
+        "from":"",
+        "to":"",
+        "message":"",
+    }
