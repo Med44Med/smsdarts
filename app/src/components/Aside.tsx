@@ -24,7 +24,7 @@ const Aside = () => {
   const { devices, logOut } = auth!;
   
   return (
-    <aside className="w-56 bg-[#2b2b2b] h-full flex flex-col p-3">
+    <aside className="w-56 bg-[#2b2b2b] h-full md:flex flex-col p-3 hidden">
       <div className="w-full flex flex-col items-center gap-2 py-4 border-b border-primary/20">
         {/* <H1 className="font-bold text-lg text-center">{user?.username}</H1> */}
         <div className="w-full flex flex-col justify-center items-start gap-3">

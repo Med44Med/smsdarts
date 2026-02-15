@@ -1,4 +1,5 @@
 import Aside from "@/components/Aside";
+import Header from "@/components/Header";
 import { Span, SubText } from "@/components/Text";
 import { WebSocketContext } from "@/context/contexts";
 import type { WebSocketContextType } from "@/types";
@@ -28,10 +29,11 @@ const Layout = () => {
     <>
       <main className="flex bg-[#1e1e1e] h-screen overflow-x-hidden">
         <Aside />
-        <article className="flex-1 overflow-y-auto px-10 py-10 flex flex-col gap-10">
+        <Header />
+        <article className="flex-1 overflow-y-auto py-30 px-3 md:p-10 flex flex-col gap-10">
           <div
             className={clsx(
-              "fixed top-0 left-56 w-[calc(100%-224px)] py-2 bg-red-500 z-50 flex justify-center items-center",
+              "fixed top-24 md:top-0 left-0 md:left-56 w-full md:w-[calc(100%-224px)] py-2 bg-red-500 z-50 flex justify-center items-center",
               isOnline ? "-translate-y-full" : "translate-y-0",
             )}
           >
@@ -47,7 +49,7 @@ const Layout = () => {
           </div>
           <div
             className={clsx(
-              "fixed top-0 left-56 w-[calc(100%-224px)] py-2 bg-amber-500 z-50 flex justify-center items-center",
+              "fixed top-24 md:top-0 left-0 md:left-56 w-full md:w-[calc(100%-224px)] py-2 bg-amber-500 z-50 flex justify-center items-center",
               isServerOnline === "online" ? "-translate-y-full" : "translate-y-0",
             )}
           >
